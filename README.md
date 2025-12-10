@@ -1,4 +1,4 @@
-<p align="center">
+<p align="right">
   <img src="Logo.png" alt="Talking SWR Meter Logo" width="200">
 </p>
 
