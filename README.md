@@ -268,3 +268,13 @@ This project demonstrates that RF measurement tools **can be made accessible**.
 Blind and visually impaired operators should be able to tune antennas and measure SWR **independently**.
 
 Pull requests and community contributions are highly welcome.
+
+
+## Disclaimer / Haftungsausschluss
+
+This project is provided "as is", without any warranty of any kind.
+Building, modifying, or using the hardware and software is entirely at
+your own risk. The authors assume no liability for any damage to radio
+equipment, property, or persons. RF systems can generate heat, high
+voltages, and strong electromagnetic fields. Always follow your local
+regulations and operate responsibly.
