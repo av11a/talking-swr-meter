@@ -21,7 +21,7 @@ extern "C" {
 #include "voice_data.h"
 
 // ========================================================
-// ESP32-S3 TALKING SWR METER V4.4
+// ESP32-S3 TALKING SWR METER V4.5
 //
 // - RF measurement (forward/reflected) with calibration table
 // - 6-button ladder on one ADC input (T1..T6)
@@ -181,7 +181,7 @@ bool   tuningHasTone           = false;
 // WiFi / Webserver
 // --------------------------------------------------------
 
-const char* AP_SSID = "SWR-Meter-S3-V4.4";
+const char* AP_SSID = "SWR-Meter-S3-V4.5";
 WebServer   server(80);
 
 // --------------------------------------------------------
@@ -894,7 +894,7 @@ String buildHtmlPage() {
     "<!DOCTYPE html><html lang='en'><head>"
     "<meta charset='UTF-8'>"
     "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
-    "<title>SWR Meter S3 V4.4</title>"
+    "<title>SWR Meter S3 V4.5</title>"
     "<style>"
     "body{font-family:sans-serif;padding:1.5rem;background:#111;color:#eee;}"
     "h1{font-size:1.6rem;margin-bottom:0.5rem;}"
@@ -905,7 +905,7 @@ String buildHtmlPage() {
     "border:1px solid #555;border-radius:0.4rem;color:#eee;text-decoration:none;margin-right:0.5rem;}"
     "</style>"
     "</head><body>"
-    "<h1>SWR Meter (ESP32-S3 V4.4, PROGMEM voice)</h1>"
+    "<h1>SWR Meter (ESP32-S3 V4.5, PROGMEM voice)</h1>"
     "<p>Last measured values:</p>"
     "<div class='box'>"
     "<div class='label'>Output power</div>"
@@ -1418,7 +1418,7 @@ void setup() {
   delay(1000);
 
   Serial.println();
-  Serial.println("=== ESP32-S3 SWR Meter V4.4: PROGMEM voice, calibration, no SD card ===");
+  Serial.println("=== ESP32-S3 SWR Meter V4.5: PROGMEM voice, calibration, no SD card ===");
 
   // Load defaults
   resetConfigToDefaults();
@@ -1532,5 +1532,6 @@ void loop() {
 
   delay(10);
 }
+
 
 
