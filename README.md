@@ -104,14 +104,48 @@ All data (configuration & calibration) is stored in **NVS (flash)**.
 
 # 📡 Directional Coupler Requirements
 
-A directional coupler with **50 Ω system impedance** is required.
-
+A directional coupler with 50 Ω system impedance is required.
 It must provide two DC voltages proportional to RF power:
 
-- **FWD** — forward power voltage  (0V - 3.3V)
-- **REV** — reflected power voltage  (0V - 3.3V)
+- **FWD** — forward power voltage (0–3.3 V recommended)
+- **REV** — reflected power voltage (0–3.3 V recommended)
 
 These voltages are read by two ADC inputs on the ESP32-S3.
+
+### Voltage level considerations
+
+Many directional couplers or SWR bridges produce output voltages that do **not** fall directly into the safe ADC input range of the ESP32-S3 (0–3.3 V).  
+Depending on the coupler design, the voltage may be:
+
+- too **high** (may exceed 3.3 V at higher RF power)
+- too **low** (millivolt-level signals at low RF power)
+- non-linear or noisy
+
+To ensure correct ADC operation and protect the ESP32-S3, an intermediate conditioning stage may be required:
+
+#### If the coupler output voltage is **too high**:
+Use a **resistor divider** (voltage divider) to reduce the signal into the safe range.  
+Ensure the divider output never exceeds 3.3 V even at the maximum RF power you plan to measure.
+
+#### If the coupler output voltage is **too low**:
+Use a **simple op-amp amplifier** or buffer stage to increase the voltage.  
+
+#### If your coupler already outputs 0–3.3 V:
+You may connect it **directly** to the ESP32-S3 ADC pins, assuming:
+
+- a common ground exists between the RF section and ESP32
+- the output impedance is below ~10 kΩ (for stable ADC readings)
+- no RF leakage reaches the microcontroller
+
+### Calibration
+
+Regardless of signal conditioning, the firmware relies on **10 calibration points** (Power ↔ Voltage).  
+After hardware wiring, you must perform calibration via the embedded web interface to achieve accurate measurements over the full RF range.
+
+
+
+
+
 
 ### Calibration mapping
 
