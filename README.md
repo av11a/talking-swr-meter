@@ -32,7 +32,7 @@ The goal of this project is to promote **inclusion in amateur radio** by demonst
 
 ## 🔔 Morse code buzzer
 - Encodes:
-  - RF power (0–99 watts)
+  - RF power (f.ex. 0–99 watts)
   - SWR × 10 (e.g., 1.3 → “13”)  
 - Adjustable speed  
 - Confirmation beeps for settings  
